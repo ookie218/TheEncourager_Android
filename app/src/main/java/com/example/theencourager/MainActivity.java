@@ -31,33 +31,33 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Healing options we recognize for comparison
-        if (getNeed.equalsIgnoreCase("healing") || getNeed.equalsIgnoreCase("healer") ||
+        else if (getNeed.equalsIgnoreCase("healing") || getNeed.equalsIgnoreCase("healer") ||
                 getNeed.equalsIgnoreCase("health") || getNeed.equalsIgnoreCase("sick") ||
                 getNeed.equalsIgnoreCase("sickness") || getNeed.equalsIgnoreCase("doctor")) {
             getNeed = HealingVerses.healingResponse();
         }
 
         //Encouragement options we recognize for comparison
-        if (getNeed.equalsIgnoreCase("depression") || getNeed.equalsIgnoreCase("depressed") ||
+        else if (getNeed.equalsIgnoreCase("depression") || getNeed.equalsIgnoreCase("depressed") ||
                 getNeed.equalsIgnoreCase("uplift") || getNeed.equalsIgnoreCase("uplifted") ||
                 getNeed.equalsIgnoreCase("encouragement")) {
             getNeed = EncouragementVerses.encouragementResponse();
         }
 
         //Prayer options we recognize for comparison
-        if (getNeed.equalsIgnoreCase("pray") || getNeed.equalsIgnoreCase("prayer")) {
+        else if (getNeed.equalsIgnoreCase("pray") || getNeed.equalsIgnoreCase("prayer")) {
             getNeed = PrayerVerses.prayResponse();
         }
 
         //Wisdom options we recognize for comparison
-        if (getNeed.equalsIgnoreCase("wisdom") || getNeed.equalsIgnoreCase("wise") ||
+        else if (getNeed.equalsIgnoreCase("wisdom") || getNeed.equalsIgnoreCase("wise") ||
                 getNeed.equalsIgnoreCase("proverbs") || getNeed.equalsIgnoreCase("learning") ||
                 getNeed.equalsIgnoreCase("learn")) {
             getNeed = WisdomVerses.wiseResponse();
         }
 
         //Love options we recognize for comparison
-        if (getNeed.equalsIgnoreCase("love") || getNeed.equalsIgnoreCase("lust") ||
+        else if (getNeed.equalsIgnoreCase("love") || getNeed.equalsIgnoreCase("lust") ||
                 getNeed.equalsIgnoreCase("marriage") || getNeed.equalsIgnoreCase("engagement") ||
                 getNeed.equalsIgnoreCase("sex")) {
             getNeed = LoveVerses.loveResponse();
@@ -65,24 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         //What if response isn't what I accounted for?
         //While "answer" is not equal to x AND not equal to y AND not equal to z...
-        if (!getNeed.equalsIgnoreCase("money") && !getNeed.equalsIgnoreCase("bills") &&
-                !getNeed.equalsIgnoreCase("finances") && !getNeed.equalsIgnoreCase("cash") &&
-                !getNeed.equalsIgnoreCase("tithing") && !getNeed.equalsIgnoreCase("provision") &&
-                !getNeed.equalsIgnoreCase("healing") && !getNeed.equalsIgnoreCase("healer") &&
-                !getNeed.equalsIgnoreCase("health") && !getNeed.equalsIgnoreCase("sick") &&
-                !getNeed.equalsIgnoreCase("sickness") && !getNeed.equalsIgnoreCase("doctor") &&
-                !getNeed.equalsIgnoreCase("depression") && !getNeed.equalsIgnoreCase("depressed") &&
-                !getNeed.equalsIgnoreCase("uplift") && !getNeed.equalsIgnoreCase("uplifted") &&
-                !getNeed.equalsIgnoreCase("encouragement") && !getNeed.equalsIgnoreCase("depression") &&
-                !getNeed.equalsIgnoreCase("depressed") &&
-                !getNeed.equalsIgnoreCase("uplift") && !getNeed.equalsIgnoreCase("uplifted") &&
-                !getNeed.equalsIgnoreCase("encouragement") && !getNeed.equalsIgnoreCase("pray") &&
-                !getNeed.equalsIgnoreCase("prayer") && !getNeed.equalsIgnoreCase("wisdom") &&
-                !getNeed.equalsIgnoreCase("wise") && !getNeed.equalsIgnoreCase("proverbs") &&
-                !getNeed.equalsIgnoreCase("learning") && !getNeed.equalsIgnoreCase("learn") &&
-                !getNeed.equalsIgnoreCase("love") && !getNeed.equalsIgnoreCase("lust") &&
-                !getNeed.equalsIgnoreCase("marriage") && !getNeed.equalsIgnoreCase("engagement") &&
-                !getNeed.equalsIgnoreCase("sex")) {
+        else  {
             getNeed = "Please forgive me, but I didn't understand your need...";
         }
 
