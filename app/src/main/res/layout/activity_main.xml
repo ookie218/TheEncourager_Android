@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.example.theencourager.MainActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/subHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--Where we aim to encourage you in The Lord"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/initialPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="@string/initial_Prompt"
+        android:paddingBottom="16dp"
+        android:layout_marginTop="75dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="89dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <EditText
+        android:id="@+id/yourNeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="35dp"
+        android:hint="Enter your need here"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="76dp"
+        android:paddingBottom="16dp" />
+
+    <Button
+        android:id="@+id/encourageMe"
+        android:layout_width="197dp"
+        android:layout_height="92dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Button"
+        android:onClick="getResponse"/>
+
+</LinearLayout>
