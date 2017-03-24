@@ -3,6 +3,7 @@ package com.example.theencourager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -18,16 +19,22 @@ public class Response extends AppCompatActivity {
 
         Intent intent = getIntent();
         String yourNeed = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        TextView textView = new TextView(this);
-        textView.setTextSize(40);
-        textView.setText(yourNeed);
+        TextView responseView = (TextView) findViewById(R.id.responseHolder);
+        responseView.setTextSize(25);
+        responseView.setText(yourNeed);
 
-        ViewGroup layout = (ViewGroup) findViewById(R.id.activity_response);
-        layout.addView(textView);
+//        Un-needed since I'm referencing a view already created
+//        ViewGroup layout = (ViewGroup) findViewById(R.id.activity_response);
+//        layout.addView(responseView);
 
 
 
     }
 
+
+    public void backHome(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 
 }

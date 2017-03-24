@@ -42,7 +42,7 @@ public class LoveVerses {
                     "Son, that whosoever believeth in him should not perish, but have " +
                     "everlastng life",
 
-            "Luke 6:35: But love your enemies, and do goodm and lend, hoping for " +
+            "Luke 6:35: But love your enemies, and do good and lend, hoping for " +
                     "nothing again; and in your reward shall be great, and ye shall be " +
                     "the children of the Highest: for he is kind unto the unthankful and " +
                     "[to] the evil",
