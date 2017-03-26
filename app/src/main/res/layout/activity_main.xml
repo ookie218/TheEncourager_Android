@@ -7,10 +7,12 @@
     tools:context="com.example.theencourager.MainActivity"
     android:orientation="vertical">
 
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:id="@+id/logo2"
         android:background="@color/colorPrimary"
+        android:src="@drawable/encourager_logo"
         android:layout_weight="2"/>
 
         <ScrollView
@@ -27,47 +29,67 @@
 
 
                 <TextView
-                        android:id="@+id/subHeading"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="--Where we aim to encourage you in The Lord" />
+                    android:id="@+id/initialPrompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:hint="@string/initial_Prompt"
+                    android:paddingBottom="8dp"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="40dp" />
 
-                    <TextView
-                        android:id="@+id/initialPrompt"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="35dp"
-                        android:hint="@string/initial_Prompt"
-                        android:paddingBottom="8dp"
-                        android:textAlignment="center"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="89dp"
-                        tools:layout_editor_absoluteY="40dp" />
+                <EditText
+                    android:id="@+id/yourNeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:ems="10"
+                    android:hint="@string/enter_need_Hint"
+                    android:inputType="textShortMessage"
+                    android:paddingBottom="16dp"
+                    tools:layout_editor_absoluteX="85dp"
+                    tools:layout_editor_absoluteY="76dp" />
 
-                    <EditText
-                        android:id="@+id/yourNeed"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="35dp"
-                        android:ems="10"
-                        android:hint="@string/enter_need_Hint"
-                        android:inputType="textShortMessage"
-                        android:paddingBottom="16dp"
-                        tools:layout_editor_absoluteX="85dp"
-                        tools:layout_editor_absoluteY="76dp" />
+                <Button
+                    android:id="@+id/encourageMe"
+                    android:layout_width="197dp"
+                    android:layout_height="92dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/initial_button"
+                    android:onClick="getResponse" />
 
-                    <Button
-                        android:id="@+id/encourageMe"
-                        android:layout_width="197dp"
-                        android:layout_height="92dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="50dp"
-                        android:text="@string/initial_button"
-                        android:onClick="getResponse" />
+
+                        <android.support.v7.widget.ButtonBarLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp">
+
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/emailButton"
+                                android:layout_weight="1"/>
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/instagramButton"
+                                android:layout_weight="1"/>
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/twitterButton"
+                                android:layout_weight="1"/>
+
+                        </android.support.v7.widget.ButtonBarLayout>
 
             </LinearLayout>
 
@@ -77,7 +99,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2017 Ookie Ebron inc"
+        android:text="2017 Ookie Ebron - Christ Urbanite inc"
         android:gravity="center" />
 
 </LinearLayout>
