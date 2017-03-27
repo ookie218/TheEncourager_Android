@@ -1,5 +1,6 @@
 package com.example.theencourager;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -10,8 +11,8 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.theencourager.MESSAGE";
-    public static String Instagram_Url = "www.instagram.com/ookie218";
-    public static String Twitter_Url = "www.twitter.com/ookie218";
+    public static String Instagram_Url = "http://www.instagram.com/ookie218";
+    public static String Twitter_Url = "http://www.twitter.com/ookie218";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,14 +84,33 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void openTwitter(View veiw) {
-        Intent twitterIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Twitter_Url));
-        if (twitterIntent.resolveActivity(getPackageManager()) != null) {
+        Uri twitterUri = Uri.parse(Twitter_Url);
+        Intent twitterIntent = new Intent(Intent.ACTION_VIEW, twitterUri);
+
+        twitterIntent.setPackage("com.twitter.android");
+
+        try {
             startActivity(twitterIntent);
+        } catch(ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://twitter.com/ookie218")));
         }
     }
 
-    public void openInstagram () {
+    public void openInstagram (View view) {
+        Uri instagramUri = Uri.parse(Instagram_Url);
+        Intent instagramIntent = new Intent(Intent.ACTION_VIEW, instagramUri);
 
+        instagramIntent.setPackage("com.instagram.android");
+
+        try {
+            startActivity(instagramIntent);
+        } catch(ActivityNotFoundException e) {
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://instagram.com/ookie218")));
+        }
     }
+
+
 
 }
