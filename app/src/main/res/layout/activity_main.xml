@@ -13,87 +13,98 @@
         android:id="@+id/logo2"
         android:background="@color/colorPrimary"
         android:src="@drawable/encourager_logo"
-        android:layout_weight="2"/>
+        android:layout_weight="7"/>
 
-        <ScrollView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
 
-            <LinearLayout
+
+            <TextView
+                android:id="@+id/initialPrompt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp">
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:hint="@string/initial_Prompt"
+                android:paddingBottom="16dp"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="89dp"
+                tools:layout_editor_absoluteY="40dp" />
+
+            <EditText
+                android:id="@+id/yourNeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="@string/enter_need_Hint"
+                android:inputType="textShortMessage"
+                android:paddingBottom="16dp"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="76dp" />
+
+            <Button
+                android:id="@+id/encourageMe"
+                android:layout_width="197dp"
+                android:layout_height="92dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:onClick="getResponse"
+                android:text="@string/initial_button" />
 
 
-                <TextView
-                    android:id="@+id/initialPrompt"
-                    android:layout_width="match_parent"
+            <android.support.v7.widget.ButtonBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:padding="15dp">
+
+
+                <ImageButton
+                    android:id="@+id/emailButton"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="7dp"
-                    android:hint="@string/initial_Prompt"
-                    android:paddingBottom="8dp"
-                    android:textAlignment="center"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteX="89dp"
-                    tools:layout_editor_absoluteY="40dp" />
+                    android:layout_weight="1"
+                    android:paddingBottom="12dp"
+                    android:src="@drawable/glyphicons_envelope"
+                    android:background="@null"/>
 
-                <EditText
-                    android:id="@+id/yourNeed"
-                    android:layout_width="match_parent"
+                <ImageButton
+                    android:id="@+id/instagramButton"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="25dp"
-                    android:ems="10"
-                    android:hint="@string/enter_need_Hint"
-                    android:inputType="textShortMessage"
-                    android:paddingBottom="16dp"
-                    tools:layout_editor_absoluteX="85dp"
-                    tools:layout_editor_absoluteY="76dp" />
+                    android:layout_weight="1"
+                    android:paddingBottom="12dp"
+                    android:src="@drawable/glyphicons_instagram"
+                    android:background="@null"/>
 
-                <Button
-                    android:id="@+id/encourageMe"
-                    android:layout_width="197dp"
-                    android:layout_height="92dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="25dp"
-                    android:text="@string/initial_button"
-                    android:onClick="getResponse" />
+                <ImageButton
+                    android:id="@+id/twitterButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="12dp"
+                    android:src="@drawable/glyphicons_twitter"
+                    android:background="@null"/>
 
+            </android.support.v7.widget.ButtonBarLayout>
 
-                        <android.support.v7.widget.ButtonBarLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="15dp">
+        </LinearLayout>
 
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/emailButton"
-                                android:layout_weight="1"/>
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/instagramButton"
-                                android:layout_weight="1"/>
-
-                            <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/twitterButton"
-                                android:layout_weight="1"/>
-
-                        </android.support.v7.widget.ButtonBarLayout>
-
-            </LinearLayout>
-
-        </ScrollView>
+    </ScrollView>
 
     <TextView
         android:id="@+id/textView"
