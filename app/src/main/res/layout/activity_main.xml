@@ -86,7 +86,8 @@
                     android:layout_weight="1"
                     android:paddingBottom="12dp"
                     android:src="@drawable/glyphicons_envelope"
-                    android:background="?android:selectableItemBackground"/>
+                    android:background="?android:selectableItemBackground"
+                    android:onClick="sendEmail"/>
 
                 <ImageButton
                     android:id="@+id/instagramButton"

@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.theencourager.MESSAGE";
     public static String Instagram_Url = "http://www.instagram.com/ookie218";
     public static String Twitter_Url = "http://www.twitter.com/ookie218";
+    public static String personalEmail = "ookieebron@gmail.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,8 +79,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void sendEmail () {
+    public void sendEmail(View view) {
+        String[] addresses = {personalEmail};
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse("mailto: "));
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Please Pray for Me");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Hey, my name is ____ and I need prayer for ____ ");
 
+        if (emailIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(emailIntent);
+        }
     }
 
 
