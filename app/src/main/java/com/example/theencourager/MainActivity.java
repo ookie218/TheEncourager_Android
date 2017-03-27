@@ -1,6 +1,7 @@
 package com.example.theencourager;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.theencourager.MESSAGE";
+    public static String Instagram_Url = "www.instagram.com/ookie218";
+    public static String Twitter_Url = "www.twitter.com/ookie218";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,4 +75,22 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, getNeed);
         startActivity(intent);
     }
+
+
+    public void sendEmail () {
+
+    }
+
+
+    public void openTwitter(View veiw) {
+        Intent twitterIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Twitter_Url));
+        if (twitterIntent.resolveActivity(getPackageManager()) != null) {
+            startActivity(twitterIntent);
+        }
+    }
+
+    public void openInstagram () {
+
+    }
+
 }
