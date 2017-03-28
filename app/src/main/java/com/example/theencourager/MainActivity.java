@@ -82,18 +82,19 @@ public class MainActivity extends AppCompatActivity {
     public void sendEmail(View view) {
         String[] addresses = {personalEmail};
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setType("plain/text");
         emailIntent.setData(Uri.parse("mailto: "));
         emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Please Pray for Me");
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Hey, my name is ____ and I need prayer for ____ ");
 
         if (emailIntent.resolveActivity(getPackageManager()) != null) {
-            startActivity(emailIntent);
+            startActivity(Intent.createChooser(emailIntent, ""));
         }
     }
 
 
-    public void openTwitter(View veiw) {
+    public void openTwitter(View view) {
         Uri twitterUri = Uri.parse(Twitter_Url);
         Intent twitterIntent = new Intent(Intent.ACTION_VIEW, twitterUri);
 

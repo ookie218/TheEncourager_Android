@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:text="Need Prayer?"
                 android:textSize="20sp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="35dp"
                 />
 
             <android.support.v7.widget.ButtonBarLayout
