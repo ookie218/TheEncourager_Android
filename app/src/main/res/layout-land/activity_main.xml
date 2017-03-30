@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/logo2"
         android:background="@color/colorPrimary"
-        android:src="@drawable/encourager_logo"
+        android:src="@drawable/encouragerlogoland"
         android:layout_weight="2"/>
 
     <ScrollView
