@@ -43,6 +43,7 @@ public class WisdomVerses {
 
     public static String wiseResponse() {
 
+
         //Iterate through the array
         for(int i = 0; i < wisdomVerses.length; i++) {
 
