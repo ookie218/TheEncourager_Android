@@ -51,7 +51,6 @@ public class FinancialVerses {
     //Static STRING so it can be referenced and placed in jtextarea instead of void
     //since void doesn't return anything.
     public static String financialResponse() {
-        System.out.println("I understand. Well maybe this will help you out...\n");
 
         //Iterate through the array
         for(int i = 0; i < financialVerses.length; i++) {

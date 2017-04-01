@@ -55,7 +55,6 @@ public class LoveVerses {
     private static int loveIdx = random.nextInt(loveVerses.length);
 
     public static String loveResponse() {
-        System.out.println("I understand. Well maybe this will help you out...\n");
 
         //Iterate through the array
         for(int i = 0; i < loveVerses.length; i++) {

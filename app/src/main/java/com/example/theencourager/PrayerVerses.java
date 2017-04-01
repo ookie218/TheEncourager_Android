@@ -61,7 +61,6 @@ public class PrayerVerses {
     private static int prayIdx = random.nextInt(prayerVerses.length);
 
     public static String prayResponse() {
-        System.out.println("I understand. Well maybe this will help you out...\n");
 
         //Iterate through the array
         for(int i = 0; i < prayerVerses.length; i++) {

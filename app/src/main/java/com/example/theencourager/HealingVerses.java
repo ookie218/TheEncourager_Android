@@ -34,7 +34,6 @@ public class HealingVerses {
 
     //Function for the response
     public static String healingResponse() {
-        System.out.println("I understand. Well maybe this will help you out...\n");
 
         //Iterate through the array
         for(int i = 0; i < healingVerses.length; i++) {

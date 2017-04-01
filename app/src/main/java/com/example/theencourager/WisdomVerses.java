@@ -42,7 +42,6 @@ public class WisdomVerses {
     private static int wiseIdx = random.nextInt(wisdomVerses.length);
 
     public static String wiseResponse() {
-        System.out.println("I understand. Well maybe this will help you out...\n");
 
         //Iterate through the array
         for(int i = 0; i < wisdomVerses.length; i++) {
