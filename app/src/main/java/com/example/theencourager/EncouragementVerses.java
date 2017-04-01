@@ -81,7 +81,6 @@ public class EncouragementVerses {
     private static int encIdx = random.nextInt(encouragementVerses.length);
 
     public static String encouragementResponse() {
-        System.out.println("I understand. Well maybe this will help you out...\n");
 
         //Iterate through the array
         for(int i = 0; i < encouragementVerses.length; i++) {

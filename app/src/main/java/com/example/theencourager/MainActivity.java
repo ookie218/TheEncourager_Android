@@ -23,48 +23,67 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+
+
+
     public void getResponse(View view) {
         Intent intent = new Intent(this, Response.class);
         EditText need = (EditText) findViewById(R.id.yourNeed);
         String getNeed = need.getText().toString();
 
         //Finance options we recognize for comparison
-        if (getNeed.equalsIgnoreCase("money") || getNeed.equalsIgnoreCase("bills") ||
-                getNeed.equalsIgnoreCase("finances") || getNeed.equalsIgnoreCase("cash") ||
-                getNeed.equalsIgnoreCase("tithing") || getNeed.equalsIgnoreCase("provision")) {
+        if (getNeed.equalsIgnoreCase("money") || getNeed.equalsIgnoreCase("money ")
+                || getNeed.equalsIgnoreCase("bills") || getNeed.equalsIgnoreCase("bills ") ||
+                getNeed.equalsIgnoreCase("finances") || getNeed.equalsIgnoreCase("finances ")
+                || getNeed.equalsIgnoreCase("cash") || getNeed.equalsIgnoreCase("cash ") ||
+                getNeed.equalsIgnoreCase("tithing") || getNeed.equalsIgnoreCase("tithing ") ||
+                getNeed.equalsIgnoreCase("provision") || getNeed.equalsIgnoreCase("provision ")) {
             getNeed = FinancialVerses.financialResponse();
         }
 
         //Healing options we recognize for comparison
-        else if (getNeed.equalsIgnoreCase("healing") || getNeed.equalsIgnoreCase("healer") ||
-                getNeed.equalsIgnoreCase("health") || getNeed.equalsIgnoreCase("sick") ||
-                getNeed.equalsIgnoreCase("sickness") || getNeed.equalsIgnoreCase("doctor")) {
+        else if (getNeed.equalsIgnoreCase("healing") || getNeed.equalsIgnoreCase("healing ")
+                || getNeed.equalsIgnoreCase("healer") || getNeed.equalsIgnoreCase("healer ")
+                || getNeed.equalsIgnoreCase("health") || getNeed.equalsIgnoreCase("health ")
+                || getNeed.equalsIgnoreCase("sick") || getNeed.equalsIgnoreCase("sick ")
+                || getNeed.equalsIgnoreCase("sickness") || getNeed.equalsIgnoreCase("sickness ")
+                || getNeed.equalsIgnoreCase("doctor") || getNeed.equalsIgnoreCase("doctor ")) {
             getNeed = HealingVerses.healingResponse();
         }
 
         //Encouragement options we recognize for comparison
-        else if (getNeed.equalsIgnoreCase("depression") || getNeed.equalsIgnoreCase("depressed") ||
-                getNeed.equalsIgnoreCase("uplift") || getNeed.equalsIgnoreCase("uplifted") ||
-                getNeed.equalsIgnoreCase("encouragement")) {
+        else if (getNeed.equalsIgnoreCase("depression") || getNeed.equalsIgnoreCase("depression ")
+                || getNeed.equalsIgnoreCase("depressed") || getNeed.equalsIgnoreCase("depressed ")
+                || getNeed.equalsIgnoreCase("uplift") || getNeed.equalsIgnoreCase("uplift ")
+                || getNeed.equalsIgnoreCase("uplifted") || getNeed.equalsIgnoreCase("uplifted ")
+                || getNeed.equalsIgnoreCase("encouragement") || getNeed.equalsIgnoreCase("encouragement ")) {
             getNeed = EncouragementVerses.encouragementResponse();
         }
 
         //Prayer options we recognize for comparison
-        else if (getNeed.equalsIgnoreCase("pray") || getNeed.equalsIgnoreCase("prayer")) {
+        else if (getNeed.equalsIgnoreCase("pray") || getNeed.equalsIgnoreCase("pray ")
+                || getNeed.equalsIgnoreCase("prayer") || getNeed.equalsIgnoreCase("prayer ")) {
             getNeed = PrayerVerses.prayResponse();
         }
 
         //Wisdom options we recognize for comparison
-        else if (getNeed.equalsIgnoreCase("wisdom") || getNeed.equalsIgnoreCase("wise") ||
-                getNeed.equalsIgnoreCase("proverbs") || getNeed.equalsIgnoreCase("learning") ||
-                getNeed.equalsIgnoreCase("learn")) {
+        else if (getNeed.equalsIgnoreCase("wisdom") || getNeed.equalsIgnoreCase("wisdom ")
+                || getNeed.equalsIgnoreCase("wise") || getNeed.equalsIgnoreCase("wise ")
+                || getNeed.equalsIgnoreCase("proverbs") || getNeed.equalsIgnoreCase("proverbs ")
+                || getNeed.equalsIgnoreCase("learning") || getNeed.equalsIgnoreCase("learning ")
+                || getNeed.equalsIgnoreCase("learn") || getNeed.equalsIgnoreCase("learn ")) {
             getNeed = WisdomVerses.wiseResponse();
         }
 
         //Love options we recognize for comparison
-        else if (getNeed.equalsIgnoreCase("love") || getNeed.equalsIgnoreCase("lust") ||
-                getNeed.equalsIgnoreCase("marriage") || getNeed.equalsIgnoreCase("engagement") ||
-                getNeed.equalsIgnoreCase("sex")) {
+        else if (getNeed.equalsIgnoreCase("love") || getNeed.equalsIgnoreCase("love ")
+                || getNeed.equalsIgnoreCase("lust") || getNeed.equalsIgnoreCase("lust ")
+                || getNeed.equalsIgnoreCase("marriage") || getNeed.equalsIgnoreCase("marriage ")
+                || getNeed.equalsIgnoreCase("engagement") || getNeed.equalsIgnoreCase("engagement ")
+                || getNeed.equalsIgnoreCase("sex") || getNeed.equalsIgnoreCase("sex ")) {
             getNeed = LoveVerses.loveResponse();
         }
 
