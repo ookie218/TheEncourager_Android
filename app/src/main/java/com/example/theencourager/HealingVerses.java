@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-/**
- * Created by ookie on 3/19/2017.
- */
 
 public class HealingVerses {
 
