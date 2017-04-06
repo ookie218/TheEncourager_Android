@@ -1,5 +1,7 @@
 package com.example.theencourager;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -8,50 +10,37 @@ import java.util.Random;
 
 public class HealingVerses {
 
-    private static String[] healingVerses = new String[] {
-            "Mark 9:23: Jesus said unto him, If thou canst believe, "
-                    + "all things are possible to him that believeth.",
-
-            "James 5:16: Confess your faults one to another, "
-                    + "and pray one for another, that ye may be healed. "
-                    + "The effectual fervent prayer of a righteous man availeth much.",
-
-            "Isaiah 53:5: But he was wounded for our transgressions, \n" +
-                    "he was bruised for our iniquities: \n" +
-                    "the chastisement of our peace was upon him; \n" +
-                    "and with his stripes we are healed.",
-
-            "Mark 10:52: And Jesus said unto him, Go thy way; "
-                    + "thy faith hath made thee whole. "
-                    + "And immediately he received his sight, and followed Jesus in the way."
-
-    };
-    //Creates Random Object
-    private static Random random = new Random();
-
-    //Creates Index to hold index for Random
-    private static int healIdx = random.nextInt(healingVerses.length);
 
     //Function for the response
     public static String healingResponse() {
 
-        //Iterate through the array
-        for(int i = 0; i < healingVerses.length; i++) {
+        //Creates Random Object
+        Random random = new Random();
 
-            //Create temp String to hold the position of array we're looping through
-            String temp = healingVerses[i];
 
-            //[i] will become equal to whatever is in Index
-            healingVerses[i] = healingVerses[healIdx];
+        ArrayList<String> healingVersesList = new ArrayList<>();
+        healingVersesList.add("Mark 9:23: Jesus said unto him, If thou canst believe, "
+                + "all things are possible to him that believeth.");
 
-            //Whatever is in temp will then be placed here (Spot where the random picked)
-            healingVerses[healIdx] = temp;
+        healingVersesList.add("James 5:16: Confess your faults one to another, "
+                + "and pray one for another, that ye may be healed. "
+                + "The effectual fervent prayer of a righteous man availeth much.");
 
-            //Therefore - swap complete at this point
-        }
+        healingVersesList.add("Isaiah 53:5: But he was wounded for our transgressions, \n" +
+                "he was bruised for our iniquities: \n" +
+                "the chastisement of our peace was upon him; \n" +
+                "and with his stripes we are healed.");
 
-        //Return Random Index of Array after shuffle
-        return healingVerses[healIdx];
+        healingVersesList.add("Mark 10:52: And Jesus said unto him, Go thy way; "
+                + "thy faith hath made thee whole. "
+                + "And immediately he received his sight, and followed Jesus in the way."
+        );
+
+        Collections.shuffle(healingVersesList);
+
+        //Creates Index to hold index for Random
+        String healIdx = healingVersesList.get(random.nextInt(healingVersesList.size()));
+
+        return healIdx;
     }
-
 }
