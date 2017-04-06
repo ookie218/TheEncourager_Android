@@ -10,6 +10,7 @@
     android:paddingRight="32dp"
     android:paddingTop="16dp"
     android:gravity="center"
+    android:background="@color/colorFont"
     tools:context="com.example.theencourager.Response"
     android:orientation="vertical" >
 
@@ -22,17 +23,26 @@
             android:id="@+id/responseHolder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
     </ScrollView>
 
     <Button
-        android:id="@+id/backHomeBtn"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:text="@string/homeBtn_Text"
+        android:onClick="sameNeed"/>
+
+    <Button
+        android:id="@+id/backHomeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:text="@string/new_need_button"
         android:onClick="backHome"
         android:layout_weight="0"
         />

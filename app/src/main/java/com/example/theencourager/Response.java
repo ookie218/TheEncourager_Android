@@ -31,7 +31,14 @@ public class Response extends AppCompatActivity {
 
     }
 
+public void sameNeed(View view) {
+    Intent intent = new Intent(this, Response.class);
+    finish();
+    startActivity(intent);
 
+    MainActivity mainActivity = new MainActivity();
+    mainActivity.getResponse(view);
+}
     public void backHome(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

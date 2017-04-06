@@ -4,4 +4,5 @@
     <string name="homeBtn_Text">More Encouragement</string>
     <string name="initial_button">Encourage Me</string>
     <string name="enter_need_Hint">Enter your need here</string>
+    <string name="new_need_button">New Need</string>
 </resources>
