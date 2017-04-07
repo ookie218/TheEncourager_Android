@@ -10,6 +10,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Random;
 
+import static com.example.theencourager.MainActivity.EXTRA_MESSAGE;
+
 public class Response extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,7 @@ public class Response extends AppCompatActivity {
         setContentView(R.layout.activity_response);
 
         Intent intent = getIntent();
-        String yourNeed = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        String yourNeed = intent.getStringExtra(EXTRA_MESSAGE);
         TextView responseView = (TextView) findViewById(R.id.responseHolder);
         responseView.setTextSize(25);
         responseView.setText(yourNeed);
@@ -36,7 +38,8 @@ public void sameNeed(View view) {
     finish();
 
 
-    String getNeed = getIntent().getStringExtra("getNeed");
+    //String getNeed = getIntent().getStringExtra("getNeed");
+    String getNeed = String.valueOf(findViewById(R.id.yourNeed));
 
     //Finance options we recognize for comparison
     if (getNeed.equalsIgnoreCase("money") || getNeed.equalsIgnoreCase("money ")
@@ -98,6 +101,10 @@ public void sameNeed(View view) {
     }
 
 //Need to padd in getNeed to reload the activity
+
+    Intent intent = new Intent(this, Response.class);
+    intent.putExtra(EXTRA_MESSAGE, getNeed);
+    startActivity(intent);
 
 }
     public void backHome(View view) {
