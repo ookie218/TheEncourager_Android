@@ -32,12 +32,73 @@ public class Response extends AppCompatActivity {
     }
 
 public void sameNeed(View view) {
-    Intent intent = new Intent(this, Response.class);
-    finish();
-    startActivity(intent);
 
-    MainActivity mainActivity = new MainActivity();
-    mainActivity.getResponse(view);
+    finish();
+
+
+    String getNeed = getIntent().getStringExtra("getNeed");
+
+    //Finance options we recognize for comparison
+    if (getNeed.equalsIgnoreCase("money") || getNeed.equalsIgnoreCase("money ")
+            || getNeed.equalsIgnoreCase("bills") || getNeed.equalsIgnoreCase("bills ") ||
+            getNeed.equalsIgnoreCase("finances") || getNeed.equalsIgnoreCase("finances ")
+            || getNeed.equalsIgnoreCase("cash") || getNeed.equalsIgnoreCase("cash ") ||
+            getNeed.equalsIgnoreCase("tithing") || getNeed.equalsIgnoreCase("tithing ") ||
+            getNeed.equalsIgnoreCase("provision") || getNeed.equalsIgnoreCase("provision ")) {
+        getNeed = FinancialVerses.financialResponse();
+    }
+
+    //Healing options we recognize for comparison
+    else if (getNeed.equalsIgnoreCase("healing") || getNeed.equalsIgnoreCase("healing ")
+            || getNeed.equalsIgnoreCase("healer") || getNeed.equalsIgnoreCase("healer ")
+            || getNeed.equalsIgnoreCase("health") || getNeed.equalsIgnoreCase("health ")
+            || getNeed.equalsIgnoreCase("sick") || getNeed.equalsIgnoreCase("sick ")
+            || getNeed.equalsIgnoreCase("sickness") || getNeed.equalsIgnoreCase("sickness ")
+            || getNeed.equalsIgnoreCase("doctor") || getNeed.equalsIgnoreCase("doctor ")) {
+        getNeed = HealingVerses.healingResponse();
+    }
+
+    //Encouragement options we recognize for comparison
+    else if (getNeed.equalsIgnoreCase("depression") || getNeed.equalsIgnoreCase("depression ")
+            || getNeed.equalsIgnoreCase("depressed") || getNeed.equalsIgnoreCase("depressed ")
+            || getNeed.equalsIgnoreCase("uplift") || getNeed.equalsIgnoreCase("uplift ")
+            || getNeed.equalsIgnoreCase("uplifted") || getNeed.equalsIgnoreCase("uplifted ")
+            || getNeed.equalsIgnoreCase("encouragement") || getNeed.equalsIgnoreCase("encouragement ")) {
+        getNeed = EncouragementVerses.encouragementResponse();
+    }
+
+    //Prayer options we recognize for comparison
+    else if (getNeed.equalsIgnoreCase("pray") || getNeed.equalsIgnoreCase("pray ")
+            || getNeed.equalsIgnoreCase("prayer") || getNeed.equalsIgnoreCase("prayer ")) {
+        getNeed = PrayerVerses.prayResponse();
+    }
+
+    //Wisdom options we recognize for comparison
+    else if (getNeed.equalsIgnoreCase("wisdom") || getNeed.equalsIgnoreCase("wisdom ")
+            || getNeed.equalsIgnoreCase("wise") || getNeed.equalsIgnoreCase("wise ")
+            || getNeed.equalsIgnoreCase("proverbs") || getNeed.equalsIgnoreCase("proverbs ")
+            || getNeed.equalsIgnoreCase("learning") || getNeed.equalsIgnoreCase("learning ")
+            || getNeed.equalsIgnoreCase("learn") || getNeed.equalsIgnoreCase("learn ")) {
+        getNeed = WisdomVerses.wiseResponse();
+    }
+
+    //Love options we recognize for comparison
+    else if (getNeed.equalsIgnoreCase("love") || getNeed.equalsIgnoreCase("love ")
+            || getNeed.equalsIgnoreCase("lust") || getNeed.equalsIgnoreCase("lust ")
+            || getNeed.equalsIgnoreCase("marriage") || getNeed.equalsIgnoreCase("marriage ")
+            || getNeed.equalsIgnoreCase("engagement") || getNeed.equalsIgnoreCase("engagement ")
+            || getNeed.equalsIgnoreCase("sex") || getNeed.equalsIgnoreCase("sex ")) {
+        getNeed = LoveVerses.loveResponse();
+    }
+
+    //What if response isn't what I accounted for?
+    //While "answer" is not equal to x AND not equal to y AND not equal to z...
+    else  {
+        getNeed = "Please forgive me, but I didn't understand your need...";
+    }
+
+//Need to padd in getNeed to reload the activity
+
 }
     public void backHome(View view) {
         Intent intent = new Intent(this, MainActivity.class);
